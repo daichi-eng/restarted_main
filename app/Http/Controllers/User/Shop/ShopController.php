@@ -6,9 +6,9 @@ use Exception;
 use App\Exceptions\ApiException;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\OutputFile;
-use App\Http\Controllers\User\Au_pay\XmlFormat;
-use App\Http\Controllers\User\Au_pay\AupayApi;
-use App\Http\Controllers\User\Au_pay\auPayFormat;
+// use App\Http\Controllers\User\Au_pay\XmlFormat;
+// use App\Http\Controllers\User\Au_pay\AupayApi;
+// use App\Http\Controllers\User\Au_pay\auPayFormat;
 use App\Http\Controllers\User\Shop\Store_shop_validation;
 use App\Models\Shop;
 use App\Models\User;
@@ -144,53 +144,53 @@ class ShopController extends Controller
 	 * check API
 	 * ------------------------------------------------------------ */
 	/**
-	 * check api 店舗情報が正しいか確認する。
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function check_api()
-	{
-		$user = User::find(Auth::id());
+	//  * check api 店舗情報が正しいか確認する。
+	//  * @param  \Illuminate\Http\Request  $request
+	//  * @param  int  $id
+	//  * @return \Illuminate\Http\Response
+	//  */
+	// public function check_api()
+	// {
+	// 	$user = User::find(Auth::id());
 		
-		//ログインユーザーのIDからショップ情報の取得
-		$user_id = Auth::id();
+	// 	//ログインユーザーのIDからショップ情報の取得
+	// 	$user_id = Auth::id();
 		
-		//ショップ情報を取得
-		$shop = DB::table('shops')
-			->select('id','shop_num', 'shop_api_key', 'updated_at')
-			->where('user_id',$user_id)
-			->get();
+	// 	//ショップ情報を取得
+	// 	$shop = DB::table('shops')
+	// 		->select('id','shop_num', 'shop_api_key', 'updated_at')
+	// 		->where('user_id',$user_id)
+	// 		->get();
 		
-		//API連携を利用して商品情報(複数)の取得
-		$AupayApi = new AupayApi;
+	// 	//API連携を利用して商品情報(複数)の取得
+	// 	$AupayApi = new AupayApi;
 		
-		try {
+	// 	try {
 			
-			$result = $AupayApi->searchItems($shop[0]->shop_num, $shop[0]->shop_api_key);
-			if($result['result']['status'] == '0'){
-				$result_status[] = '0';
-				$result_status[] = '通信成功';
-			}elseif($result['result']['status'] == '1'){
-				$result_status[] = '1';
-				$result_status[] = $result['result']['error']['code'] .'：' .$result['result']['error']['message'] ;
+	// 		$result = $AupayApi->searchItems($shop[0]->shop_num, $shop[0]->shop_api_key);
+	// 		if($result['result']['status'] == '0'){
+	// 			$result_status[] = '0';
+	// 			$result_status[] = '通信成功';
+	// 		}elseif($result['result']['status'] == '1'){
+	// 			$result_status[] = '1';
+	// 			$result_status[] = $result['result']['error']['code'] .'：' .$result['result']['error']['message'] ;
 				
-			}else{
-				$result_status[] = '2';
-				$result_status[] = '通信エラー：せぬエラーが発生しました。';
-			}
+	// 		}else{
+	// 			$result_status[] = '2';
+	// 			$result_status[] = '通信エラー：せぬエラーが発生しました。';
+	// 		}
 			
-		} catch (Exception $e) {
-			$result_status[] = '5';
-			$result_status[] = $e->getMessage() ;
-		}finally {
-			if(!isset($result_status)){
-				$result_status[] = '2';
-				$result_status[] = '想定外のエラー：システム担当に問い合わせください。';
-			}
-			return view('user.aupay.edit_shop', compact('user', 'shop', 'result_status'));
-		}
-	}
+	// 	} catch (Exception $e) {
+	// 		$result_status[] = '5';
+	// 		$result_status[] = $e->getMessage() ;
+	// 	}finally {
+	// 		if(!isset($result_status)){
+	// 			$result_status[] = '2';
+	// 			$result_status[] = '想定外のエラー：システム担当に問い合わせください。';
+	// 		}
+	// 		return view('user.aupay.edit_shop', compact('user', 'shop', 'result_status'));
+	// 	}
+	// }
 
 	/** ************************************************************************************
 	 * CSV download
