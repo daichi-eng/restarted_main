@@ -51,7 +51,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 		 * Admin詳細と編集へのルーティング
 		 * ********************************************************
 		 */
-		Route::namespace('admin')->prefix('admin')->name('admin.')->group(function () {
+		Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 			Route::get('home_admin', 'AdminController@index_admin')->name('home_admin');
 
 			/*
