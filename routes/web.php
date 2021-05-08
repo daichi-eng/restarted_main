@@ -172,50 +172,6 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 			
 		});		
 		
-		
-		/* ---------------------------------
-		 *	au PAY Tool
-		 * ---------------------------------
-		 */
-		Route::namespace('Au_pay')->prefix('aupay')->name('aupay.')->group(function () {
-			Route::get('home/', 'AupayController@index')->name('home');
-			
-			/*
-			 * shopの登録
-			 */
-// 			Route::get('create_shop', 'AupayController@create_shop')->name('create_shop');
-// 			Route::post('store_shop', 'AupayController@store_shop')->name('store_shop');
-// 			Route::get('edit_shop/{id}', 'AupayController@edit_shop')->name('edit_shop');
-// 			Route::post('update_shop/{id}', 'AupayController@update_shop')->name('update_shop');
-			
-			/*
-			 * API チェック
-			 */
-			Route::get('check_api/', 'AupayController@check_api')->name('check_api');
-			
-			/*
-			 * csv_download
-			 */
-			Route::get('show_csv_download/', 'AupayController@show_csv_download')->name('show_csv_download');
-			Route::post('csv_create/', 'AupayController@csv_create')->name('csv_create');
-			Route::get('csv_download/{id}', 'AupayController@csv_download')->name('csv_download');
-			
-			//csv_upload
-// 			Route::get('show_csv_upload/', 'CsvUploadController@show_csv_upload')->name('show_csv_upload');
-// 			Route::post('csv_upload/', 'CsvUploadController@csv_upload')->name('csv_upload');
-			
-			Route::get('upload_test/', 'TestUpload@upload_test')->name('upload_test');
-			
-		});
-		/* ---------------------------------
-		 *	ChatWork APIテスト
-		 * ---------------------------------
-		 */
-		Route::namespace('chatwork')->prefix('chatwork')->name('chatwork.')->group(function () {
-			Route::post('post_msg', 'ChatworkController@post_msg')->name('post_msg');
-		});
-	
-	
 	});
 	
 	
