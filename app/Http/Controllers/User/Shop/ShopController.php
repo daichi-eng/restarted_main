@@ -56,7 +56,6 @@ class ShopController extends Controller
 			$this->stMsgs['msg'][0] = $e->getCode() .'：' .$e->getMessage();
 			
 		}finally {
-		    
 			$stMsgs = $this->stMsgs;
 			return view('user.shop', compact('stMsgs', 'user' , 'shop'));
 		}
