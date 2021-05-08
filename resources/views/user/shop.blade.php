@@ -13,9 +13,9 @@ au Pay ショップ情報TOP
 
 	<div class="card mb-3">
 		
-		@if(!isset($shop))
+		@if(!isset($shop[0]))
 		<div class="card-header">ショップ情報の登録</div>
-		@elseif(isset($shop))
+		@elseif(isset($shop[0]))
 		<div class="card-header">ショップ情報編集</div>
 		@endif
 		
@@ -46,7 +46,7 @@ au Pay ショップ情報TOP
 			{{-- ================================================
 				ショップ情報登録 
 				================================================ --}}
-			@if(!isset($shop))
+			@if(!isset($shop[0]))
 			
 			<form method="POST" action="{{ route('user.shop.store_shop') }}" class="">
 				@csrf
@@ -75,17 +75,22 @@ au Pay ショップ情報TOP
 					</div>
 				</div>
 				
+				{{--
+					<div class="form-group row mb-0">
+						<div class="col-md-6 offset-md-4 d-flex justify-content-end">登録する</div>
+					</div>
+				--}}
 				<div class="form-group row mb-0">
-					<div class="col-md-6 offset-md-4 d-flex justify-content-end">登録する</div>
+					<div class="col-md-6 offset-md-4 d-flex justify-content-end">
+						<button type="submit" class="btn btn-success">登録する</button>
+					</div>
 				</div>
 			</form>
-			<p>※ショップ情報は1ユーザー1つしか登録できません。</p>
-
 
 			{{-- ================================================
 				ショップ情報編集 
 				================================================ --}}
-			@elseif(isset($shop))
+			@elseif(isset($shop[0]))
 			<form method="POST" action="{{ route('user.shop.update_shop', ['id' => $shop[0]->id ]) }}" class="">
 				@csrf
 				
