@@ -21,10 +21,10 @@ class RouteServiceProvider extends ServiceProvider
      * 管理者権限の分割
      */
     // User権限
-    public const HOME = 'user/aupay/home';
+    public const HOME = 'user/home';
     
     // Admin権限
-    public const ADMIN_HOME = '/admin/home';
+    public const ADMIN_HOME = 'admin/home';
     
     /**
      * Define your route model bindings, pattern filters, etc.
