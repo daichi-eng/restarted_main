@@ -137,7 +137,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 			Route::post('store_shop/', 'ShopController@store_shop')->name('store_shop');
 			Route::post('update_shop/{id}', 'ShopController@update_shop')->name('update_shop');
 			
-			Route::get('edit_shop/{id}', 'AupayController@edit_shop')->name('edit_shop');
+			//Route::get('edit_shop/{id}', 'AupayController@edit_shop')->name('edit_shop');
 			// Route::post('update_shop/{id}', 'AupayController@update_shop')->name('update_shop');
 		});
 		
