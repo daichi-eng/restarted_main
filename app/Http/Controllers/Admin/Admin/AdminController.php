@@ -18,8 +18,7 @@ class AdminController extends Controller
 	}
 
 	/**
-	 * Display a listing of the resource.
-	 *
+	 * index_admin
 	 * @return \Illuminate\Http\Response
 	*/
 	public function index_admin()
@@ -32,8 +31,7 @@ class AdminController extends Controller
 	}
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
+	 * create_admin
 	 * @return \Illuminate\Http\Response
 	 */
 	public function create_admin()
@@ -42,8 +40,7 @@ class AdminController extends Controller
 	}
 	
 	/**
-	 * Store a newly created resource in storage.
-	 *
+	 * store_admin
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
@@ -60,8 +57,7 @@ class AdminController extends Controller
 	}
 	
 	/**
-	 * Display the specified resource.
-	 *
+	 * show_admin
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
@@ -73,8 +69,7 @@ class AdminController extends Controller
 	
 	
 	/**
-	* Show the form for editing the specified resource.
-	*
+	* edit_admin
 	* @param  int  $id
 	* @return \Illuminate\Http\Response
 	*/
@@ -85,8 +80,7 @@ class AdminController extends Controller
 	}
 
 	/**
-	 * Update the specified resource in storage.
-	 *
+	 * Admin_update_validation
 	 * @param  \Illuminate\Http\Request  $request
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
@@ -102,8 +96,7 @@ class AdminController extends Controller
 	}
 	
 	/**
-	 * Remove the specified resource from storage.
-	 *
+	 * destroy_admin($id)
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */

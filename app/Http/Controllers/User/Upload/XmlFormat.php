@@ -798,8 +798,7 @@ class XmlFormat
 
 	/**
 	 * エスケープ処理
-	 * XMLの値の中に&が入ってるとエラーで落ちるので
-	 *
+	 * XMLの値の中に&が入ってるとエラーで落ちるため防止。
 	 * @param String
 	 * @return String
 	 */
@@ -831,8 +830,7 @@ class XmlFormat
 	
 	/**
 	 * chkArrayData
-	 * 任意のキーで配列の存在チェック。
-	 * 存在する場合は空チェックをし、存在しない場合は''をチェック。
+	 * 任意のキーで配列の存在チェック。存在する場合は空チェックをし、存在しない場合は''をチェック。
 	 * @param array $array
 	 * @return String $key
 	 */

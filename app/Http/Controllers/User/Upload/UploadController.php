@@ -35,7 +35,7 @@ class UploadController extends Controller
 	/**
 	 * show_upload
 	 * @param Request $request
-	 * @return view();
+	 * @return view;
 	 */
 	public function index()
 	{
