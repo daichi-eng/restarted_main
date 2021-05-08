@@ -145,7 +145,7 @@ au Pay ショップ情報TOP
 			</form>
 			@endif
 
-			{{-- テスト通信する --}}
+			{{-- テスト通信する 
 			<form method="GET" action="{{ route('user.aupay.check_api')}}" class="mt-2">
 				@csrf
 				<div class="form-group row mb-0">
@@ -163,6 +163,7 @@ au Pay ショップ情報TOP
 					@endif
 				</div>
 			</form>
+			--}}
 			<p>※ショップ情報は1ユーザー1つしか登録できません。</p>
 		</div>
 	</div>

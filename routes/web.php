@@ -137,7 +137,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 			Route::post('store_shop/', 'ShopController@store_shop')->name('store_shop');
 			Route::post('update_shop/{id}', 'ShopController@update_shop')->name('update_shop');
 			
-			Route::get('edit_shop/{id}', 'AupayController@edit_shop')->name('edit_shop');
+			//Route::get('edit_shop/{id}', 'AupayController@edit_shop')->name('edit_shop');
 			// Route::post('update_shop/{id}', 'AupayController@update_shop')->name('update_shop');
 		});
 		
@@ -166,7 +166,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 			Route::get('result_download/{id}', 'DownloadController@result_download')->name('result_download');
 			
 			// Route::get('show_csv_download/', 'AupayController@show_csv_download')->name('show_csv_download');
-			Route::post('csv_create/', 'AupayController@csv_create')->name('csv_create');
+			//Route::post('csv_create/', 'AupayController@csv_create')->name('csv_create');
 			// Route::get('csv_download/{id}', 'AupayController@csv_download')->name('csv_download');
 			
 		});		
