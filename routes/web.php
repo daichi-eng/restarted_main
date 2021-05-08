@@ -166,7 +166,7 @@ Route::namespace('User')->prefix('user')->name('user.')->group(function () {
 			Route::get('result_download/{id}', 'DownloadController@result_download')->name('result_download');
 			
 			// Route::get('show_csv_download/', 'AupayController@show_csv_download')->name('show_csv_download');
-			Route::post('csv_create/', 'AupayController@csv_create')->name('csv_create');
+			//Route::post('csv_create/', 'AupayController@csv_create')->name('csv_create');
 			// Route::get('csv_download/{id}', 'AupayController@csv_download')->name('csv_download');
 			
 		});		
