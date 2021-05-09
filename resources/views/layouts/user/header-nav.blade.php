@@ -30,7 +30,7 @@
 						<a class="dropdown-item" href="{{ route('user.logout') }}"
 							onclick="event.preventDefault();
 							document.getElementById('logout-form').submit();">
-							{{ __('Logout') }}
+							ログアウト
 						</a>
 						<form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
 							@csrf
@@ -49,9 +49,8 @@
 				
 		<ul class="">
 			<li class=""><a href="{{ url('user/shop/index') }}" >ショップ情報</a></li>
-			<li class=""><a href="{{ url('user/download/index')}}" >CSV一括ダウンロード</a></li>
-			<li class=""><a href="{{ url('user/upload/index')}}" >CSV一括アップロード</a></li>
-			<li class=""><a href="{{ url('user/home') }}" class="text-danger">マニュアルページ</a></li>
+			<li class=""><a href="{{ url('user/download/index')}}" >CSVダウンロード</a></li>
+			<li class=""><a href="{{ url('user/upload/index')}}" >CSVアップロード</a></li>
 		</ul>
 	</div>{{-- End header-down --}}
 	

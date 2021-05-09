@@ -20,7 +20,7 @@
 			-------------------------------------- -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<div class="card-header">一般ユーザ</div>
+				<div class="card-header text-success">一般ユーザー</div>
 
 				<div class="card-body">
 					

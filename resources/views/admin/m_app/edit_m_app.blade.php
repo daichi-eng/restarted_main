@@ -17,7 +17,7 @@
 		<!-- 一般ユーザ -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<div class="card-header">アプリ 編集</div>
+				<div class="card-header text-success">アプリ 編集</div>
 
 				<!-- card-body Start -->
 				<div class="card-body">

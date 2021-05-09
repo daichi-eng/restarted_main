@@ -52,8 +52,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 		 * ********************************************************
 		 */
 		Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
-			Route::get('home_admin', 'AdminController@index_admin')->name('home_admin');
-
+			
 			/*
 			 * EDIT 20200816
 			 * 登録画面は既存の仕組みで用意されているため不要
@@ -61,6 +60,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 			//Route::get('create_admin', 'AdminController@create_admin')->name('create_admin');
 			//Route::post('store_admin', 'AdminController@store_admin')->name('store_admin');
 
+			Route::get('home_admin', 'AdminController@index_admin')->name('home_admin');
 			Route::get('show_admin/{id}', 'AdminController@show_admin')->name('show_admin');
 			Route::get('edit_admin/{id}', 'AdminController@edit_admin')->name('edit_admin');
 			Route::post('update_admin/{id}', 'AdminController@update_admin')->name('update_admin');

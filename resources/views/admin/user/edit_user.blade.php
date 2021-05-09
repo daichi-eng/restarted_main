@@ -4,8 +4,8 @@
 　システム管理者
 @endsection
 
-@section('view-title')
-　ユーザー情報　編集
+@section('title')
+　ユーザー編集
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
 		<!-- 一般ユーザ -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<div class="card-header">一般ユーザ 詳細</div>
+				<div class="card-header text-success">一般ユーザ 詳細</div>
 
 				<!-- card-body Start -->
 				<div class="card-body">

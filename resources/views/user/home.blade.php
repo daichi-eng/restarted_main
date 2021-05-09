@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-	au PAYマーケット（旧wowma!）
+	au PAYマーケット
 @endsection
 
 

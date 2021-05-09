@@ -20,7 +20,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
 			
-				<button type="button" class="card-header btn btn-light text-left border-0" data-toggle="collapse" data-target="#sysadmin_control" aria-expanded="false" aria-controls="sysadmin_control">システム担当者 管理</button>
+				<button type="button" class="card-header btn text-success text-left border-0" data-toggle="collapse" data-target="#sysadmin_control" aria-expanded="true" aria-controls="sysadmin_control">システム担当者 管理</button>
 				
 				<div class="card-body collapse" id="sysadmin_control">
 				
@@ -68,7 +68,7 @@
 			-------------------------------------- -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<button type="button" class="card-header btn btn-light text-left border-0" data-toggle="collapse" data-target="#generaluser_control" aria-expanded="false" aria-controls="sysadmin_control">一般ユーザ 管理</button>
+				<button type="button" class="card-header btn text-success text-left border-0" data-toggle="collapse" data-target="#generaluser_control" aria-expanded="true" aria-controls="sysadmin_control">一般ユーザ 管理</button>
 
 				<div class="card-body collapse" id="generaluser_control">
 					
@@ -121,7 +121,7 @@
 		----------------------------------- -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<button type="button" class="card-header btn btn-light text-left border-0" data-toggle="collapse" data-target="#app_control" aria-expanded="false" aria-controls="app_control">アプリマスタ 管理</button>
+				<button type="button" class="card-header btn text-success text-left border-0" data-toggle="collapse" data-target="#app_control" aria-expanded="true" aria-controls="app_control">アプリマスタ 管理</button>
 			
 				<div class="card-body collapse" id="app_control">	
 					{{-- アプリ管理画面へ --}}

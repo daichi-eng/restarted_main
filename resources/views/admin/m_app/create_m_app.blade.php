@@ -16,7 +16,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<!-- card Start -->
 			<div class="card">
-				<div class="card-header">アプリ新規登録</div>
+				<div class="card-header text-success">アプリ新規登録</div>
 
 				<!-- card-body Start -->
 				<div class="card-body">

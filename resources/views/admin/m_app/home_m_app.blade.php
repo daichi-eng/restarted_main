@@ -17,7 +17,7 @@
 		----------------------------------- -->
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3">
 			<div class="card">
-				<div class="card-header">アプリマスタ</div>
+				<div class="card-header text-success">アプリマスタ</div>
 			
 				<div class="card-body">	
 					{{-- アプリ一新規登録 --}}
