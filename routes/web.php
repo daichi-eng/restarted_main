@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 	
 	Auth::routes([
-		'register' => false, // デフォルトの登録機能OFF
+		'register' => true, // デフォルトの登録機能OFF
 		'verify'   => false, // メール確認機能OFF（※5.7系以上のみ）
 		'reset'    => false  // メールリマインダー機能ON
 	]);
@@ -31,7 +31,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 	
 	Route::get('login',     'Auth\LoginController@showLoginForm')->name('login');
 	Route::post('login',    'Auth\LoginController@login');
-	
+
+
+	Route::post('register',   'Auth\RegisterController@register');
+	Route::get('register',   'Auth\RegisterController@showRegistrationForm')->name('register');
+
 	/*
 	 * 管理者認証後に使用可能
 	 */
@@ -40,8 +44,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 		
 		//認証ページ
 		Route::post('logout',   'Auth\LoginController@logout')->name('logout');
-		Route::post('register',   'Auth\RegisterController@register');
-		Route::get('register',   'Auth\RegisterController@showRegistrationForm')->name('register');
 	
 
 		
