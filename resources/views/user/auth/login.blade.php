@@ -67,5 +67,20 @@
             </div>
         </div>
     </div>
+    
+    <div class="row justify-content-center my-3">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">サンプルユーザー</div>
+
+                <div class="card-body">
+                    <p>サンプルユーザー（一般）用意しました。ぜひシステムを操作してみてください。</p>
+
+                    <div>メールアドレス：sample@icloud.com</div>
+                    <div>パスワード：sample@icloud.com</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
