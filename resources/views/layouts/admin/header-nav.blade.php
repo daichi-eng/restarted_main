@@ -13,14 +13,15 @@
 		
 			<!-- Right Side Of Navbar -->
 			<ul class="navbar-nav ml-auto">
-				<!-- Authentication Links -->
+
+			<!-- Authentication Links -->
 			@unless (Auth::guard('admin')->check())
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('admin.login') }}">ログイン</a>
 				</li>
 				@if (Route::has('admin.register'))
 				<li class="nav-item dropdown">
-					<a class="nav-link" href="{{ route('admin.register') }}">システム管理者登録</a>
+					<a class="nav-link" href="{{ route('admin.register') }}">システム担当者登録</a>
 				</li>
 				@endif
 			@else
@@ -40,14 +41,6 @@
 						</form>
 					</div>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link" href="{{ route('admin.register') }}">システム管理者登録</a>
-				</li>
-				@if (Route::has('admin.register'))
-				<li class="nav-item dropdown">
-					<a class="nav-link" href="{{ route('admin.register') }}">システム管理者登録</a>
-				</li>
-				@endif
 			@endunless
 			</ul>
 		</div>
@@ -59,10 +52,10 @@
 				
 		<ul class="">
 			@if (Route::has('admin.register'))
-			<li><a href="{{ route('admin.register') }}" class="btn text-success">システム管理者登録</a></li>
+			<li><a href="{{ route('admin.register') }}" class="btn text-success">システム担当者登録</a></li>
 			@endif
 			<li><a href="{{ url('admin/admin/home_admin') }}" class="btn text-success">システム担当者編集</a></li>
-			<li><a href="{{ url('admin/user/home_user')}}" class="btn ttext-success">一般ユーザー管理</a></li>
+			<li><a href="{{ url('admin/user/home_user')}}" class="btn text-success">一般ユーザー管理</a></li>
 			<li><a href="{{ url('admin/m_app/home_m_app')}}" class="btn text-success">アプリマスタ管理</a></li>
 		</ul>
 	</div>{{-- End header-down --}}
