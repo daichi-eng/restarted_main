@@ -51,12 +51,12 @@
 	<div class="bg-white header-down ">
 				
 		<ul class="">
-			@if (Route::has('admin.register'))
-			<li><a href="{{ route('admin.register') }}" class="btn text-success">システム担当者登録</a></li>
-			@endif
 			<li><a href="{{ url('admin/admin/home_admin') }}" class="btn text-success">システム担当者編集</a></li>
 			<li><a href="{{ url('admin/user/home_user')}}" class="btn text-success">一般ユーザー管理</a></li>
 			<li><a href="{{ url('admin/m_app/home_m_app')}}" class="btn text-success">アプリマスタ管理</a></li>
+			@if (Route::has('admin.register'))
+			<li><a href="{{ route('admin.register') }}" class="btn text-success">システム担当者登録</a></li>
+			@endif
 		</ul>
 	</div>{{-- End header-down --}}
 	

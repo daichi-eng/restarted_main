@@ -40,9 +40,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 		Route::get('home', 'HomeController@index')->name('home');
 		
 		//認証ページ
-		Route::post('logout',   'Auth\LoginController@logout')->name('logout');
-		Route::post('register',   'Auth\RegisterController@register');
-		Route::get('register',   'Auth\RegisterController@showRegistrationForm')->name('register');
+		Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+		Route::post('register', 'Auth\RegisterController@register');
+		Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 	
 
 		
