@@ -78,7 +78,7 @@
 						管理画面TOP
 					</a>
 					
-					@if (is_array($users))
+					@if (isset($users[0]))
 					<table class="table table-sm">
 						@if (session('status'))
 						<div class="alert alert-success" role="alert">
@@ -133,7 +133,7 @@
 					{{-- アプリ一覧表示 
 						 登録済みのアプリがあるときのみ登録
 					--}}
-					@if (is_array($m_apps))
+					@if (isset($m_apps[0]))
 					<table class="table table-sm">
 						<thead>
 							<tr>
@@ -145,7 +145,6 @@
 							</tr>
 						</thead>
 						<tbody>
-							{{--
 							<?php $m_app_cnt = 0 ?>
 							@foreach ($m_apps as $m_app)
 								<?php $m_app_cnt = $m_app_cnt +1?>
