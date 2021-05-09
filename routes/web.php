@@ -33,9 +33,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 	Route::post('login',    'Auth\LoginController@login');
 
 
-	Route::post('register',   'Auth\RegisterController@register');
-	Route::get('register',   'Auth\RegisterController@showRegistrationForm')->name('register');
-
 	/*
 	 * 管理者認証後に使用可能
 	 */
@@ -44,6 +41,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
 		
 		//認証ページ
 		Route::post('logout',   'Auth\LoginController@logout')->name('logout');
+		Route::post('register',   'Auth\RegisterController@register');
+		Route::get('register',   'Auth\RegisterController@showRegistrationForm')->name('register');
 	
 
 		
