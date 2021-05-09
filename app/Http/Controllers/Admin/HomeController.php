@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
 	/**
-	 *
+	 * 
+	 * 
 	 */
 	public function __construct()
 	{
@@ -21,8 +22,8 @@ class HomeController extends Controller
 	}
 
 	/**
-	 * Display a    listing of the resource.
-	 *
+	 * index()
+	 * ホーム画面表示
 	 * @return \Illuminate\Http\Response
 	*/
 	public function index()
@@ -50,13 +51,13 @@ class HomeController extends Controller
 		//dd($m_apps);
 		
 		//shop情報の存在の有無で分岐
-		if(isset($m_apps[0])){
+		// if(isset($m_apps[0])){
 			return view('admin.home', compact('admins', 'users','m_apps'));
-		}else{
-			//dd($m_apps);
-			$m_apps[0] = 0;
-			return view('admin.home', compact('admins', 'users','m_apps'));
-		}
+		// }else{
+		// 	//dd($m_apps);
+		// 	$m_apps[0] = 0;
+		// 	return view('admin.home', compact('admins', 'users','m_apps'));
+		// }
 		//return view('admin.home', compact('admins', 'users', 'active_admin'));
 	}
 
