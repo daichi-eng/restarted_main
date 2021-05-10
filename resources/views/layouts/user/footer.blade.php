@@ -1,19 +1,20 @@
 
 {{-- Start footer --}}
-<footer class="footer bg-info py-3">
+<div class="footer bg-info py-3">
 	<div class="container">
 		
 		<div class="row mb-2">
 			<div class="col-md-6 col-sm-12 mb-2">
 				
-				<div>開発者のアカウント</div>
+				<a class="btn text-light" href="https://twitter.com/Daichi_Started">Twitter<i class="ml-1 fab fa-twitter"></i></a>
 				
-				Twitter<a class="text-light m-2" href="https://twitter.com/Daichi_Started"><i class="ml-1 fab fa-twitter"></i></a>
+				<a class="btn text-light" href="https://github.com/daichi-eng">Github<i class="fab fa-github"></i></a>
+			
+				<a class="btn text-light" href="https://restarted.site/"><i class="fas fa-blog"></i>ブログ</a>
 				
-				Github<a class="text-light m-2" href="https://github.com/daichi-eng"><i class="fab fa-github"></i></a>
 			</div>
 			
-			<div class="col-md-4 col-sm-12 mb-2">
+			<div class="col-md-6 col-sm-12 mb-2">
 				<a class="btn text-light" href="{{ route('admin.home') }}">
 					システム管理者ページ
 				</a>
@@ -25,6 +26,6 @@
 		</div>
 		
 	</div>
-</footer>
+</div>
 
 {{-- End footer --}}
