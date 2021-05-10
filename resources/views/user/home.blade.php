@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="col-md-12 p-2">
 					CSVデータファイルを利用して、
-					多数の商品を一括で出品、または商品情報を一括で変更できるサービスです。
+					多数の商品を一括で登録したり、商品情報を編集したりできるサービスです。
 				</div>
 			</div>
 				
@@ -77,7 +77,10 @@
 		
 		<div class="card-body container">
 		
-			<div class="row mb-2 p-2">削除予定です。</div>
+			<div class="row mb-2 p-2">
+				すでに登録している商品情報を、一括してCSV形式ダウンロードできるサービスです。
+				取得したCSVを利用して、「一括商品CSVアップロード」で利用することができます。
+			</div>
 				
 			<div class="row mb-2">
 				<div class="col-md-12 d-flex justify-content-end">
