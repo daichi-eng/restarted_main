@@ -43,14 +43,13 @@ nav{
 .card{
 	background-color: white;
 	border: none;
-	box-shadow: 15px 15px 0px 0 rgb(60, 194, 235);
 	border-radius: 8px;
-	box-shadow: 0 3px 10px rgba(0,0,0,.2);
-  overflow: hidden;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+	overflow: hidden;
 	.card-header{
+		background-color: white;
 		font-weight:bold;
 		border: none;
-    	background-color: white;
 		color:#6cb2eb;
 	}
 }
@@ -62,7 +61,7 @@ footer{
     color: #fff;
     text-align: center;
     padding: 30px 0;
-    position: absolute;/*←絶対位置*/
-    bottom: 0; /*に固定*/
+    //position: absolute;/*←絶対位置*/
+    //bottom: 0; /*に固定*/
 }
 

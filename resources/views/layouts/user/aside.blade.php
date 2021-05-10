@@ -43,7 +43,7 @@
 				<strong>ツールは無料でご利用いただけます。</strong>
 			</p>
 
-			<a class="btn btn-success m-2" href="https://twitter.com/Daichi_Started"><i class="ml-1 fab fa-twitter mr-1"></i>Twitter</a>
+			<a class="btn btn-success m-2" href="https://twitter.com/Daichi_Started"><i class="fab fa-twitter mr-1"></i>Twitter</a>
 			
 			<a class="btn btn-success m-2" href="https://github.com/daichi-eng"><i class="fab fa-github mr-1"></i>Github</a>
 
@@ -59,10 +59,10 @@
 		<div class="card-body container">
 			
 			<p class="card-text">
-				エラーを見つけたときに<a href="https://restarted.site/contact_200906/">問い合わせページ</a>からご連絡いただけるととても喜びます。
+				エラーを見つけたときは、<a href="https://restarted.site/contact_200906/">お問い合わせページ</a>からご連絡いただけるととても喜びます。
 			</p>
 			
-			<a class="btn btn-success m-2 " href="https://restarted.site/"></i>問い合わせ</a>
+			<a class="btn btn-success m-2 " href="https://restarted.site/"></i>お問い合わせ</a>
 
 		</div><!-- card-body End -->
 			

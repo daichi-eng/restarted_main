@@ -1,6 +1,6 @@
 
 {{-- Start footer --}}
-<footer class="footer bg-success p-1">
+<footer class="bg-success p-1">
 	<div class="container">
 		
 		<div class="row mb-2">
