@@ -85,8 +85,8 @@ class DownloadController extends Controller
 	public function csv_download(Request $request)
 	{
 		//inputの格納
-// 		$totalCount = $request->input('totalCount');//取得件数
-		
+		$totalCount = intVal($request->input('totalCount'));//取得件数
+
 		$stMsgs[] = array();//メッセージの初期化
 		$user = User::find(Auth::id());//ログインユーザー情報の取得
 		$userId = Auth::id();//ユーザーIDの取得
@@ -138,7 +138,12 @@ class DownloadController extends Controller
 				//最大取得件数の格納
 				$MaxCount = $response['searchResult']['maxCount'];
 				$MaxCount = intval($MaxCount);//キャスト（文字列→数値）
-			
+				
+				//最大取得件数 >= 入力値の場合は、最大数=入力値を代入する。
+				//入力値＝0の場合は、"全件取得"であるため除外。
+				if(($MaxCount >= $totalCount) && ($total<>0)){
+					$MaxCount = $totalCount;
+				}
 
 				/* ----------------------------------------
 				 * auPay API通信によりレスポンスを取得する
@@ -150,7 +155,7 @@ class DownloadController extends Controller
 					$filename = sprintf($filename .'_%s' .'.csv', date('ymd_his'));//filenameの作成
 					
 				
-		//ヘッダーの書き込み回数も複数になるため注意！！！
+					//ヘッダーの書き込み回数も複数になるため注意！！！
 					//最大取得件数が500以下の場合
 					if( $MaxCount <= 500 ){
 						$response = $apiConnect->search_items('1', $MaxCount);
